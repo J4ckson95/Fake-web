@@ -5,6 +5,9 @@ export default {
 		extend: {
 			colors: {
 				"primary-green": "#00ff00"
+			},
+			transitionTimingFunction: {
+				"project-timing": "cubic-bezier(0.53, 0.13, 0.09, 0.09)"
 			}
 		},
 	},

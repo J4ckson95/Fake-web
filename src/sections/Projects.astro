@@ -1,11 +1,124 @@
+---
+const PROJECTS = [
+  {
+    title: "La gala del sr. croma",
+    subtitle: "Premios a los invisibles del cine",
+    description: "El evento de presentación ...",
+    img: "",
+    link: "",
+    info: [
+      {
+        label: "viewes unicos",
+        value: "100M",
+      },
+      {
+        label: "Pico de espectadores",
+        value: "40M",
+      },
+      {
+        label: "Audiencia media",
+        value: "260K",
+      },
+      {
+        label: "Likes de instagram",
+        value: "5M",
+      },
+    ],
+  },
+  {
+    title: "La gala del sr. croma",
+    subtitle: "Premios a los invisibles del cine",
+    description: "El evento de presentación ...",
+    img: "",
+    link: "",
+    info: [
+      {
+        label: "viewes unicos",
+        value: "100M",
+      },
+      {
+        label: "Pico de espectadores",
+        value: "40M",
+      },
+      {
+        label: "Audiencia media",
+        value: "260K",
+      },
+      {
+        label: "Likes de instagram",
+        value: "5M",
+      },
+    ],
+  },
+  {
+    title: "La gala del sr. croma",
+    subtitle: "Premios a los invisibles del cine",
+    description: "El evento de presentación ...",
+    img: "",
+    link: "",
+    info: [
+      {
+        label: "viewes unicos",
+        value: "100M",
+      },
+      {
+        label: "Pico de espectadores",
+        value: "40M",
+      },
+      {
+        label: "Audiencia media",
+        value: "260K",
+      },
+      {
+        label: "Likes de instagram",
+        value: "5M",
+      },
+    ],
+  },
+  {
+    title: "La gala del sr. croma",
+    subtitle: "Premios a los invisibles del cine",
+    description: "El evento de presentación ...",
+    img: "",
+    link: "",
+    info: [
+      {
+        label: "viewes unicos",
+        value: "100M",
+      },
+      {
+        label: "Pico de espectadores",
+        value: "40M",
+      },
+      {
+        label: "Audiencia media",
+        value: "260K",
+      },
+      {
+        label: "Likes de instagram",
+        value: "5M",
+      },
+    ],
+  },
+];
+---
+
 <section class="min-h-dvh">
-  <article class="relative">
-    <button class="pl-[60px] ml-14 group">
-      <div
-        class="bg-primary-green absolute left-0 h-full w-[60px] group-hover:w-full"
-      >
-      </div>
-      <h4>La gala del sr. Croma</h4>
-    </button>
-  </article>
+  {
+    PROJECTS.map((project) => (
+      <article class="relative border-t-2 border-black last:border-b-2">
+        <button class="pl-[60px] group">
+          <div class="bg-primary-green absolute left-0 h-full w-[60px] group-hover:w-full transition-all duration-700 ease-project-timing -z-10" />
+          <div class="py-10 ml-3">
+            <h4 class="uppercase text-8xl font-bold tracking-tighter group-hover:translate-x-10 duration-700 ease-project-timing">
+              {project.title}
+            </h4>
+            <h5 class="uppercase text-2xl text-left tracking-tighter group-hover:opacity-0 transition-opacity duration-7000 ease-in-out">
+              {project.subtitle}
+            </h5>
+          </div>
+        </button>
+      </article>
+    ))
+  }
 </section>

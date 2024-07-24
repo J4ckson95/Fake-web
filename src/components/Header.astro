@@ -3,13 +3,47 @@ import Logo from "./Logo.astro";
 ---
 
 <header
-  class="flex fixed top-0 left-0 right-0 justify-between items-center z-50"
+  id="landing-header"
+  class="flex fixed top-0 left-0 right-0 justify-between items-center z-50 h-24 px-8"
 >
-  <a>
+  <a href="">
     <Logo />
   </a>
   <div>
-    <h1 class="uppercase text-white">Agencia de talento multiplataforma</h1>
+    <h1 class="uppercase text-current">Agencia de talento multiplataforma</h1>
     <ul></ul>
   </div>
 </header>
+<style>
+  header {
+    svg,
+    h1 {
+      color: white;
+      transition: color 0.7s ease-in-out;
+    }
+    &.light {
+      svg,
+      h1 {
+        color: black;
+      }
+    }
+  }
+</style>
+<script>
+  const header = document.querySelector("#landing-header") as HTMLAnchorElement;
+  const sectionsElement = document.querySelectorAll(
+    "section[data-header-theme='dark']"
+  );
+  const intersectionOption = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+  const observe = new IntersectionObserver((entries) => {
+    entries.forEach((entrie) => {
+      const lightMode = !entrie.isIntersecting;
+      header.classList.toggle("light", lightMode);
+    });
+  }, intersectionOption);
+  sectionsElement.forEach((section) => observe.observe(section));
+</script>
