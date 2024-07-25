@@ -4,7 +4,7 @@ const PROJECTS = [
     title: "La gala del sr. croma",
     subtitle: "Premios a los invisibles del cine",
     description: "El evento de presentación ...",
-    img: "",
+    img: "../../public/projects/01.jpg",
     link: "",
     info: [
       {
@@ -29,7 +29,7 @@ const PROJECTS = [
     title: "La gala del sr. croma",
     subtitle: "Premios a los invisibles del cine",
     description: "El evento de presentación ...",
-    img: "",
+    img: "../../public/projects/02.jpg",
     link: "",
     info: [
       {
@@ -54,7 +54,7 @@ const PROJECTS = [
     title: "La gala del sr. croma",
     subtitle: "Premios a los invisibles del cine",
     description: "El evento de presentación ...",
-    img: "",
+    img: "../../public/projects/03.jpg",
     link: "",
     info: [
       {
@@ -79,7 +79,7 @@ const PROJECTS = [
     title: "La gala del sr. croma",
     subtitle: "Premios a los invisibles del cine",
     description: "El evento de presentación ...",
-    img: "",
+    img: "../../public/projects/04.jpg",
     link: "",
     info: [
       {
@@ -106,19 +106,45 @@ const PROJECTS = [
 <section class="min-h-dvh">
   {
     PROJECTS.map((project) => (
-      <article class="relative border-t-2 border-black last:border-b-2">
-        <button class="pl-[60px] group">
-          <div class="bg-primary-green absolute left-0 h-full w-[60px] group-hover:w-full transition-all duration-700 ease-project-timing -z-10" />
+      <article class="relative border-t-2 border-black last:border-b-2 group">
+        <button class="pl-[60px]">
+          <div class="bg-primary-green absolute left-0 h-full w-[60px] group-hover:w-full transition-all duration-700 ease-project-timing -z-20" />
+          <div
+            class="absolute inset-0 h-full w-full bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all ease-project-timing delay-700 -z-10"
+            style={`background-image:url(${project.img})`}
+          />
           <div class="py-10 ml-3">
-            <h4 class="uppercase text-8xl font-bold tracking-tighter group-hover:translate-x-10 duration-700 ease-project-timing">
+            <h4 class="uppercase text-8xl font-bold tracking-tighter">
               {project.title}
             </h4>
             <h5 class="uppercase text-2xl text-left tracking-tighter group-hover:opacity-0 transition-opacity duration-7000 ease-in-out">
               {project.subtitle}
             </h5>
           </div>
+          <div class="absolute right-0 border-black border-l h-full w-[300px] flex justify-center items-center">
+            <img
+              src="../../public/iconos/27323.svg"
+              class="w-[50px] rotate-180"
+            />
+          </div>
         </button>
       </article>
     ))
   }
 </section>
+<style>
+  article:hover h4 {
+    animation: text-timing 1.5s cubic-bezier(0.61, 0.03, 0.08, 0.99) both;
+  }
+  @keyframes text-timing {
+    50% {
+      transform: translateX(100px);
+    }
+    100% {
+      color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: white;
+      transform: translateX(200px);
+    }
+  }
+</style>
