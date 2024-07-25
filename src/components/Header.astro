@@ -30,7 +30,7 @@ import Logo from "./Logo.astro";
   }
 </style>
 <script>
-  const header = document.querySelector("#landing-header") as HTMLAnchorElement;
+  const header = document.getElementById("landing-header") as HTMLAnchorElement;
   const sectionsElement = document.querySelectorAll(
     "section[data-header-theme='dark']"
   );

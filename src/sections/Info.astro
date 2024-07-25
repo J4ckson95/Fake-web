@@ -1,8 +1,40 @@
-<section class="max-w-[1700px] mx-auto px-4 pt-8 mb-48">
-  <header>
+---
+import CartInfo from "@components/CartInfo.astro";
+const infoCarts = [
+  {
+    title: "Somos pocos porque nos implicamos mucho .",
+    textEfect: "Representacion",
+    paragraphStrong: "No tenemos un roster de talentso infinitos, ni queremos.",
+    paragraph:
+      "Creemos en dar un servicio total a nuestor talentos, a todos ellos sin tratos preferentes y cuidando los detalles.",
+  },
+  {
+    title: "Somos pocos porque nos implicamos mucho .",
+    textEfect: "Representacion",
+    paragraphStrong: "No tenemos un roster de talentso infinitos, ni queremos.",
+    paragraph:
+      "Creemos en dar un servicio total a nuestor talentos, a todos ellos sin tratos preferentes y cuidando los detalles.",
+  },
+  {
+    title: "Somos pocos porque nos implicamos mucho .",
+    textEfect: "Representacion",
+    paragraphStrong: "No tenemos un roster de talentso infinitos, ni queremos.",
+    paragraph:
+      "Creemos en dar un servicio total a nuestor talentos, a todos ellos sin tratos preferentes y cuidando los detalles.",
+  },
+];
+---
+
+<section class="max-w-[1700px] mx-auto px-4 pt-48 mb-48">
+  <header class="mb-20">
     <h2 class="text-[180px] font-bold leading-[.8] tracking-tighter mb-8">
       Te ubicamos donde quieras estar<span class="text-primary-green">.</span>
     </h2>
-    <h3 class="text-[54px] font-bold">Seas una marca o una empresa</h3>
+    <h3 class="text-[54px] font-bold ml-36 tracking-tight">
+      Seas una marca o una empresa.
+    </h3>
   </header>
+  <div class="grid grid-cols-3 gap-20">
+    {infoCarts.map((cart) => <CartInfo data={cart} />)}
+  </div>
 </section>
