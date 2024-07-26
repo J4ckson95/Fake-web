@@ -1,0 +1,55 @@
+---
+const { label, value } = Astro.props;
+---
+
+<article class="h-full border-black border-y-2 flex flex-row">
+  <div class="w-[55%] h-full">
+    <header class="px-28 pt-16 mb-8">
+      <h2 class="text-7xl font-bold uppercase tracking-tighter mb-12">
+        La gala del sr. croma<span class="text-primary-green">.</span>
+      </h2>
+      <p class="text-xl mb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+        asperiores optio vero magnam sapiente, dolore provident accusantium ea,
+        cupiditate dicta nemo culpa ut dolorem maxime dignissimos saepe repellat
+        necessitatibus eos!
+      </p>
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui
+        explicabo dolorem fuga vitae earum ex, harum aliquid, vero sint cum ad
+        nisi doloribus. In asperiores aliquam sint officia possimus.
+      </p>
+    </header>
+    <footer
+      class="bg-primary-green flex flex-col justify-center items-center py-12"
+    >
+      <div
+        class="bg-transparent w-[80%] mx-auto flex flex-row justify-between items-center"
+      >
+        <div class="text-center">
+          <p class="text">100M</p>
+          <p>Vieweres Unicos</p>
+        </div>
+        <div>
+          <p>40M</p>
+          <p>Pico de Espectadores</p>
+        </div>
+        <div>
+          <p>260K</p>
+          <p>Audiencia Media</p>
+        </div>
+        <div>
+          <p>5M</p>
+          <p>Likes en Instagram</p>
+        </div>
+      </div>
+      <a
+        class="px-14 py-4 bg-black text-primary-green text-3xl font-bold rounded-full cursor-pointer"
+        >LINK</a
+      >
+    </footer>
+  </div>
+  <figure class="w-[45%] h-full">
+    <img src="../../public/projects/01.jpg" />
+  </figure>
+</article>
