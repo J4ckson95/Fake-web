@@ -1,0 +1,58 @@
+---
+const { label, value } = Astro.props;
+---
+
+<article class="h-full border-black border-y-2 flex flex-row">
+  <div class="w-[55%] h-full">
+    <header class="px-28 pt-16 h-[60%]">
+      <h2 class="text-7xl font-bold uppercase tracking-tighter mb-12">
+        La gala del sr. croma<span class="text-primary-green">.</span>
+      </h2>
+      <p class="text-xl mb-6">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atqueasperiores
+        optio vero magnam sapiente, dolore provident accusantium ea asperiores
+        optio vero magnam sapiente, dolore provident accusantium ea, cupiditate
+        dicta nemo culpa ut dolorem maxime dignissimos saepe repellat
+        necessitatibus eos!
+      </p>
+      <p class="text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus qui
+        explicabo dolorem fuga vitae earum ex, harum aliquid, vero sint cum ad
+        explicabo dolorem fuga vitae earum ex, harum aliquid, vero sint cum
+        adexplicabo dolorem fuga vitae earum ex, harum aliquid, vero sint cum ad
+        nisi doloribus. In asperiores aliqua.
+      </p>
+    </header>
+    <footer
+      class="bg-primary-green flex flex-col justify-center items-center py-12 mt-24 h-[40%]"
+    >
+      <div
+        class="bg-transparent w-[80%] mx-auto grid grid-cols-4 gap-8 text-center"
+      >
+        <div>
+          <p class="text-5xl font-bold">100M</p>
+          <p class="text-lg">Vieweres Unicos</p>
+        </div>
+        <div>
+          <p class="text-5xl font-bold">40M</p>
+          <p class="text-lg">Pico de Espectadores</p>
+        </div>
+        <div>
+          <p class="text-5xl font-bold">260K</p>
+          <p class="text-lg">Audiencia Media</p>
+        </div>
+        <div>
+          <p class="text-5xl font-bold">5M</p>
+          <p class="text-lg">Likes en Instagram</p>
+        </div>
+      </div>
+      <a
+        class="px-14 py-4 mt-12 bg-black text-primary-green text-3xl font-bold rounded-full cursor-pointer"
+        >LINK</a
+      >
+    </footer>
+  </div>
+  <figure class="w-[45%] h-full">
+    <img src="../../public/projects/01.jpg" />
+  </figure>
+</article>

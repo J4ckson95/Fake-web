@@ -1,4 +1,6 @@
 ---
+import ProjectDetail from "@components/ProjectDetail.astro";
+
 const PROJECTS = [
   {
     title: "La gala del sr. croma",
@@ -121,16 +123,17 @@ const PROJECTS = [
               {project.subtitle}
             </h5>
           </div>
-          <div class="absolute right-0 border-black border-l h-full w-[300px] flex justify-center items-center">
+          <div class="h-full w-[300px] absolute right-0 top-0 flex justify-center items-center border-black border-l">
             <img
               src="../../public/iconos/27323.svg"
-              class="w-[50px] rotate-180"
+              class="w-[50px] rotate-180 group-hover:translate-x-8 duration-700 ease-project-timing"
             />
           </div>
         </button>
       </article>
     ))
   }
+  <ProjectDetail />
 </section>
 <style>
   article:hover h4 {
@@ -138,13 +141,13 @@ const PROJECTS = [
   }
   @keyframes text-timing {
     50% {
-      transform: translateX(100px);
+      transform: translateX(150px);
     }
     100% {
       color: transparent;
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: white;
-      transform: translateX(200px);
+      transform: translateX(250px);
     }
   }
 </style>
